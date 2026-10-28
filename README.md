@@ -2,8 +2,8 @@
 
 | Field | Value |
 |---|---|
-| Student | **[replace with your full name]** |
-| Group | **[replace with your group]** |
+| Student | Tykhovska Yuliia Romanivna |
+| Group | KI-405 |
 | Variant | 6 |
 | Language | TypeScript |
 | Build/run | npm-compatible scripts (pnpm) |
