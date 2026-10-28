@@ -20,11 +20,11 @@ Use this skill for `create-actions` after the package build and test scripts exi
 
 # Verification
 
-Confirm that both CI scripts exist, then confirm that the workflow contains `ubuntu-latest`, `windows-latest`, `macos-latest`, checkout, Node.js setup, and only delegates build/test work to the CI scripts.
+Confirm that both CI scripts exist, then run only the script compatible with the current operating system: `scripts\\ci.bat` on Windows or `sh scripts/ci.sh` on Unix. Do not try to execute the Unix script on Windows or the batch script on Unix; inspect its content instead and let the GitHub Actions matrix execute it on its target runner. Finally, confirm that the workflow contains `ubuntu-latest`, `windows-latest`, `macos-latest`, checkout, Node.js setup, and only delegates build/test work to the CI scripts.
 
 # Typical failure
 
-If a CI script is missing, create it before creating the workflow. If the workflow includes secrets, stop and report the issue. Do not add credentials to repair CI.
+If a CI script is missing, create it before creating the workflow. A shell unavailable on the current operating system is not a failure when its script exists and is syntactically reviewed; report that GitHub Actions will execute it on the matching runner. If the workflow includes secrets, stop and report the issue. Do not add credentials to repair CI.
 
 # Example
 
