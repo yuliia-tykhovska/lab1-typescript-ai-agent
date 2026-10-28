@@ -1,0 +1,16 @@
+# Dependencies and generated output
+node_modules/
+dist/
+coverage/
+build/
+
+# Environment and local tooling
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Editor and operating-system files
+.vscode/
+Thumbs.db
