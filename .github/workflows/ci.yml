@@ -23,8 +23,6 @@ jobs:
           node-version: 22
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 11
       - name: Build and test on Windows
         if: runner.os == 'Windows'
         run: scripts\ci.bat
