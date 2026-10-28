@@ -1,0 +1,20 @@
+{
+  "name": "lab1-typescript-ai-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "description": "Laboratory work 1: an AI agent that scaffolds and verifies a TypeScript Hello World project.",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "start": "node dist/hello.js",
+    "test": "vitest run",
+    "check": "node scripts/check.mjs && tsc --noEmit && vitest run",
+    "ci": "node scripts/ci.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
+  }
+}
